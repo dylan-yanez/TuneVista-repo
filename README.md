@@ -6,3 +6,4 @@ Music Player Local Development Start
     then type 'npm run dev' (starts the server in developer mode)
   2. To start the front end switch to directory called client
     and type 'npm start'
+  3. To see changes to the frontend check 'http://localhost:3000/'
