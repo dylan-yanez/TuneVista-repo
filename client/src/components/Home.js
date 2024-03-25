@@ -1,8 +1,10 @@
-import React, {Fragment} from 'react';
+import React, { Fragment } from 'react';
+import { Link } from 'react-router-dom'; // Import Link
 import './Home.css'; // css file for styling
 
 import InputTodo from "./InputTodo";
 import ListTodos from "./ListTodos";
+import SearchTool from './SearchTool';
 
 const Home = () => {
   return (
@@ -11,12 +13,15 @@ const Home = () => {
         <h1 className="title">Welcome to TuneVista</h1>
         <nav>
           <ul className="nav-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="/library">Library</a></li>
-            <li><a href="/playlist">Playlists</a></li>
-            <li><a href="/account">Account</a></li>
+            <li><Link to="/">Home</Link></li> {/* Use Link instead of <a> */}
+            <li><Link to="/library">Library</Link></li> {/* Use Link instead of <a> */}
+            <li><Link to="/playlist">Playlists</Link></li> {/* Use Link instead of <a> */}
+            <li><Link to="/account">Account</Link></li> {/* Use Link instead of <a> */}
           </ul>
         </nav>
+        <Fragment>
+          <SearchTool />
+        </Fragment>
       </header>
       <main>
         <section className="main-section">
@@ -32,11 +37,8 @@ const Home = () => {
       <footer>
         <p className="footer-text">&copy; 2024 TuneVista. All rights reserved.</p>
       </footer>
-      
     </div>
-    
   );
-  
 }
 
 export default Home;

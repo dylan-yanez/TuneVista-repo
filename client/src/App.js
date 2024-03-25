@@ -1,17 +1,18 @@
-import React, { Fragment } from "react";
-import './App.css';
+// App.js
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './components/Home';
+import SearchResult from './components/SearchResult';
 
-//components
-import Home from "./components/Home";
-
-function App() {
+const App = () => {
   return (
-  <Fragment>
-    <div className="container" >
-      <Home />
-      </div>
-  </Fragment>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/search" element={<SearchResult />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
